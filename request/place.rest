@@ -13,3 +13,18 @@ x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWJiODU1NWEwYjJkN2FiNT
   "address":"Av. Ejército Mexicano esq. Tamaulipas, Plan de Ayala, Tihuatlan C.P. 92912",
  "category":"61bbd4880c4bae8d8f44a39c"
 }
+###
+
+PUT http://localhost:8080/api/places/61bbe24dec8bd1459533e844
+Content-Type: application/json
+
+{
+  "facebook":"https://www.facebook.com"
+}
+
+###
+
+GET https://lawebdepoza.vercel.app/api/places
+###
+GET https://lawebdepoza.vercel.app/api/places/61bbe24dec8bd1459533e844
+###

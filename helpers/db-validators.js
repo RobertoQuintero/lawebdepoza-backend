@@ -1,5 +1,4 @@
-// const { Categoria, Producto } = require("../models");
-const { Role, User, Place } = require("../models");
+const { Role, User, Place, Category } = require("../models");
 
 const isValidRole = async (role = "") => {
   const existeRol = await Role.findOne({ role });
@@ -19,19 +18,19 @@ const emailExists = async (email = "") => {
 
 const userExistsById = async (id) => {
   const existeUsuario = await User.findById(id);
-  if (!existeUsuario) {
+  if (!existeUsuario || !existeUsuario?.status) {
     throw new Error(`El id ${id} no existe`);
   }
   return true;
 };
 //valida que exista la categoria
-// const categoryExists = async (id) => {
-//   const categoryExists = await Categoria.findById(id);
-//   if (!categoryExists) {
-//     throw new Error(`El id ${id} no existe en la DB`);
-//   }
-//   return true;
-// };
+const categoryExists = async (id) => {
+  const categoryExists = await Category.findById(id);
+  if (!categoryExists || !categoryExists?.status) {
+    throw new Error(`El id ${id} no existe en la DB`);
+  }
+  return true;
+};
 
 // const productExists = async (id) => {
 //   const producto = await Producto.findById(id);
@@ -43,7 +42,7 @@ const userExistsById = async (id) => {
 
 const placeExists = async (id) => {
   const place = await Place.findById(id);
-  if (!place) {
+  if (!place || !place?.status) {
     throw new Error(`El id ${id} no existe en la DB`);
   }
   return true;
@@ -64,6 +63,6 @@ module.exports = {
   emailExists,
   placeExists,
   userExistsById,
-  // categoryExists,
+  categoryExists,
   // productExists,
 };

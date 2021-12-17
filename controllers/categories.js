@@ -11,7 +11,12 @@ const getCategories = async (req, res = response) => {
   res.json({ total, categories });
 };
 
-const getCategoryById = async (req, res = response) => {};
+const getCategoryById = async (req, res = response) => {
+  const { id } = req.params;
+
+  const category = await Category.findById(id).populate("user", "name");
+  res.json(category);
+};
 
 const postCategory = async (req, res = response) => {
   const name = req.body.name.toUpperCase();
@@ -31,8 +36,33 @@ const postCategory = async (req, res = response) => {
   res.status(201).json({ category });
 };
 
+const putCategory = async (req, res = response) => {
+  const { id } = req.params;
+  const name = req.body.name.toUpperCase();
+
+  const category = await Category.findByIdAndUpdate(
+    id,
+    { name },
+    { new: true }
+  );
+  res.status(204).json(category);
+};
+
+const deleteCategory = async (req, res = response) => {
+  const { id } = req.params;
+
+  const category = await Category.findByIdAndUpdate(
+    id,
+    { status: false },
+    { new: true }
+  );
+  res.status(204).json({ msg: `Categoría ${category.name} borrada` });
+};
+
 module.exports = {
   getCategories,
   getCategoryById,
   postCategory,
+  putCategory,
+  deleteCategory,
 };

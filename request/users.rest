@@ -1,12 +1,15 @@
 GET http://localhost:8080/api/users
 
 ###
+GET http://localhost:8080/api/users/61bce9d5f2f6969062548f08
+
+###
 
 POST http://localhost:8080/api/users
 Content-Type: application/json
 
 {
   "name":"Roberto Carlos Quintero",
-  "email":"langdonhp435@gmail.com",
+  "email":"test1@gmail.com",
   "password":"123456"
 }

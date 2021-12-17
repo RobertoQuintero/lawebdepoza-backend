@@ -43,11 +43,31 @@ const postPlace = async (req, res = response) => {
   };
   const place = new Place(data);
   await place.save();
-  res.json({ place });
+  res.status(201).json(place);
+};
+
+const putPlace = async (req, res = response) => {
+  const { id } = req.params;
+  const updated_at = Date.now();
+  const place = await Place.findByIdAndUpdate(
+    id,
+    { ...req.body, updated_at },
+    { new: true }
+  );
+  res.status(204).json(place);
+};
+
+const deletePlace = async (req, res = response) => {
+  const { id } = req.params;
+  const place = await Place.findByIdAndUpdate(id, { status: false });
+
+  res.status(204).json({ msg: `${place.name} ha sido borrada correctamente` });
 };
 
 module.exports = {
   postPlace,
   getPlaces,
   getPlaceById,
+  putPlace,
+  deletePlace,
 };

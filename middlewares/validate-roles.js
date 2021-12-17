@@ -3,18 +3,19 @@ const { response } = require("express");
 const isAdminRole = (req, res = response, next) => {
   if (!req.user) {
     return res.status(500).json({
-      msg: "Se quiere verificar el role son validar el token primero",
+      msg: "Se quiere verificar el role para validar el token primero",
     });
   }
 
   const { role, name } = req.user;
-  if (role !== "ADMIN_ROLE") {
+  if (role !== "ADMIN_ROLE" && role !== "SUPER_ADMIN_ROLE") {
     return res.status(401).json({
       msg: `${name} no es administrador - No puede hacer esto`,
     });
   }
   next();
 };
+
 const isSuperAdminRole = (req, res = response, next) => {
   if (!req.user) {
     return res.status(500).json({

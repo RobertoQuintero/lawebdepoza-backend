@@ -1,8 +1,19 @@
 const { Router } = require("express");
 const { check } = require("express-validator");
-const { postPlace, getPlaces, getPlaceById } = require("../controllers/places");
+const {
+  postPlace,
+  getPlaces,
+  getPlaceById,
+  putPlace,
+  deletePlace,
+} = require("../controllers/places");
 const { placeExists } = require("../helpers/db-validators");
-const { validateJWT, fieldsValidate } = require("../middlewares");
+const {
+  validateJWT,
+  fieldsValidate,
+  isAdminRole,
+  isSuperAdminRole,
+} = require("../middlewares");
 
 const router = Router();
 
@@ -26,6 +37,30 @@ router.post(
     fieldsValidate,
   ],
   postPlace
+);
+
+router.put(
+  "/:id",
+  [
+    validateJWT,
+    isAdminRole,
+    check("id", "Np es in ID válido").isMongoId(),
+    check("id").custom(placeExists),
+    fieldsValidate,
+  ],
+  putPlace
+);
+
+router.delete(
+  "/:id",
+  [
+    validateJWT,
+    isAdminRole,
+    check("id", "No es un ID válido").isMongoId(),
+    check("id").custom(placeExists),
+    fieldsValidate,
+  ],
+  deletePlace
 );
 
 module.exports = router;
