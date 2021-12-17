@@ -1,0 +1,11 @@
+GET http://localhost:8080/api/users
+
+###
+
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+  "email":"langdonhp435@gmail.com",
+  "password":"123456"
+}

@@ -1,0 +1,15 @@
+
+GET http://localhost:8080/api/places
+###
+GET http://localhost:8080/api/places/61bbe24dec8bd1459533e844
+###
+POST http://localhost:8080/api/places
+Content-Type: application/json
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWJiODU1NWEwYjJkN2FiNTVjZmYyNjMiLCJpYXQiOjE2Mzk3MDE5NjYsImV4cCI6MTYzOTcxNjM2Nn0.P5wwrYWksqftxgStUytb3wEvZYRcw68c28RuXv6WL4U
+
+{
+  "name":"La Kanija",
+  "description":"Bar y discoteca abrimos desde las 3 P.M. hasta qu el ultimo cliente se vaya, bar, snacks, alitas, buena música y excelente atención, visitanos",
+  "address":"Av. Ejército Mexicano esq. Tamaulipas, Plan de Ayala, Tihuatlan C.P. 92912",
+ "category":"61bbd4880c4bae8d8f44a39c"
+}

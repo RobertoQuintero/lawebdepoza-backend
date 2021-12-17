@@ -1,0 +1,12 @@
+
+
+GET  http://localhost:8080/api/categories
+###
+
+POST http://localhost:8080/api/categories
+Content-Type: application/json
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWJiODU1NWEwYjJkN2FiNTVjZmYyNjMiLCJpYXQiOjE2Mzk2OTE0NzQsImV4cCI6MTYzOTcwNTg3NH0._Ov--OSuPzfL3GnhAuJ78jpQI5gEde11wFqO2OqbIgE
+
+{
+  "name": "mercado"
+}
