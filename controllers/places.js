@@ -7,11 +7,7 @@ const getPlaces = async (req, res = response) => {
 
   const [total, places] = await Promise.all([
     Place.countDocuments(),
-    Place.find(query)
-      .skip(Number(from))
-      .limit(Number(limit))
-      .populate("category", "name")
-      .populate("user", "name"),
+    Place.find(query).skip(Number(from)).limit(Number(limit)),
   ]);
 
   res.json({

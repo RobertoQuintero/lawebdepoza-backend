@@ -1,0 +1,12 @@
+GET http://localhost:8080/api/search/users/test
+###
+GET https://lawebdepoza.herokuapp.com/api/search/users/test
+###
+GET http://localhost:8080/api/search/places/kanija
+###
+GET http://lawebdepoza.herokuapp.com/api/search/places/kanija
+###
+GET https://restserver-nodeudemy.herokuapp.com/api/buscar/categorias/61abf1524ce8b7080d252c4b
+###
+GET http://localhost:8080/api/buscar/productos/galletas
+###

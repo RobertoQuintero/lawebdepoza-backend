@@ -9,3 +9,14 @@ Content-Type: application/json
   "email":"langdonhp435@gmail.com",
   "password":"123456"
 }
+
+###
+POST http://lawebdepoza.herokuapp.com/api/auth/login
+Content-Type: application/json
+
+{
+  "email":"langdonhp435@gmail.com",
+  "password":"123456"
+}
+
+###

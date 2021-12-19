@@ -47,11 +47,11 @@ const placeExists = async (id) => {
   }
   return true;
 };
-const supportedCollections = (coleccion = "", colecciones = []) => {
-  const incluida = colecciones.includes(coleccion);
-  if (!incluida) {
+const supportedCollections = (collection = "", collections = []) => {
+  const available = collections.includes(collection);
+  if (!available) {
     throw new Error(
-      `La colección ${coleccion} no es permitida, ${colecciones}`
+      `La colección ${collection} no es permitida, ${collections}`
     );
   }
   return true;
