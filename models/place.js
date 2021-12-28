@@ -32,6 +32,14 @@ const Place = Schema({
     type: Number,
     default: 0,
   },
+  totalRating: {
+    type: Number,
+    default: 0,
+  },
+  quantityVoting: {
+    type: Number,
+    default: 0,
+  },
   status: {
     type: Boolean,
     default: true,

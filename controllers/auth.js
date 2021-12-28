@@ -29,7 +29,6 @@ const login = async (req, res = response) => {
     }
 
     const token = await createJWT(user.id);
-
     res.json({
       user,
       token,
@@ -62,14 +61,14 @@ const googleSignin = async (req, res = response) => {
     }
     if (!user.status) {
       return res.status(401).json({
-        msg: "Hable con el administrador, user bloqueado",
+        msg: "Hable con el administrador, usuario bloqueado",
       });
     }
 
     const token = await createJWT(user.id);
 
     res.json({
-      user,
+      ...user,
       token,
     });
   } catch (error) {

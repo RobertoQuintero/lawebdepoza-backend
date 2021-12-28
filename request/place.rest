@@ -5,7 +5,7 @@ GET http://localhost:8080/api/places/61bbe24dec8bd1459533e844
 ###
 POST http://localhost:8080/api/places
 Content-Type: application/json
-x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWJiODU1NWEwYjJkN2FiNTVjZmYyNjMiLCJpYXQiOjE2Mzk3MDE5NjYsImV4cCI6MTYzOTcxNjM2Nn0.P5wwrYWksqftxgStUytb3wEvZYRcw68c28RuXv6WL4U
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWJiODU1NWEwYjJkN2FiNTVjZmYyNjMiLCJpYXQiOjE2NDA3MTgwNDEsImV4cCI6MTY0MDczMjQ0MX0.O-BGAkOYqlV1wDNYTqAvwb_m7SRGRD21uIJ4g0ZNcPA
 
 {
   "name":"La Kanija",
