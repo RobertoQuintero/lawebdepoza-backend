@@ -2,6 +2,7 @@ const { response, request } = require("express");
 const { User } = require("../models");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
+const { createJWT } = require("../helpers");
 
 const getUsers = async (req = request, res = response) => {
   const { limit = 5, from = 0 } = req.query;
@@ -35,9 +36,11 @@ const postUser = async (req, res = response) => {
   const salt = bcrypt.genSaltSync();
   user.password = bcrypt.hashSync(password, salt);
 
-  await user.save();
+  const newUser = await user.save();
+  const token = await createJWT(newUser.id);
   res.status(201).json({
     user,
+    token,
   });
 };
 
