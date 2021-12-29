@@ -12,6 +12,7 @@ const Place = Schema({
   },
   img: {
     type: String,
+    default: "",
   },
   address: { type: String, required: [true, "La dirección es obligatoria"] },
   coordinates: {
