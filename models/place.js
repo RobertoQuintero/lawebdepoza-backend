@@ -1,5 +1,5 @@
-const { Schema, model } = require("mongoose");
-const { ObjectId, Boolean, String } = Schema.Types;
+const { Schema, model, SchemaTypes } = require("mongoose");
+const { ObjectId, Boolean, String, Number } = Schema.Types;
 
 const Place = Schema({
   name: {
@@ -16,8 +16,8 @@ const Place = Schema({
   },
   address: { type: String, required: [true, "La dirección es obligatoria"] },
   coordinates: {
-    lat: { type: Number, default: 0 },
-    lng: { type: Number, default: 0 },
+    lat: { type: SchemaTypes.Double, default: 0 },
+    lng: { type: SchemaTypes.Double, default: 0 },
   },
   facebook: { type: String, default: "" },
   web: { type: String, default: "" },
@@ -30,11 +30,11 @@ const Place = Schema({
     default: Date.now(),
   },
   rating: {
-    type: Number,
+    type: SchemaTypes.Double,
     default: 0,
   },
   totalRating: {
-    type: Number,
+    type: SchemaTypes.Double,
     default: 0,
   },
   quantityVoting: {
