@@ -8,11 +8,17 @@ Content-Type: application/json
 x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWJiODU1NWEwYjJkN2FiNTVjZmYyNjMiLCJpYXQiOjE2NDEzMjA0NTgsImV4cCI6MTY0MTMzNDg1OH0.IiGcN7KgEPf9brMK3_4fiIpzpiws1Lcdjm1nXmfSb3Q
 
 {
-  "name":"Michemar",
+  "name":"La Kanija",
   "description":"Bar y discoteca abrimos desde las 3 P.M. hasta qu el ultimo cliente se vaya, bar, snacks, alitas, buena música y excelente atención, visitanos",
   "address":"Av. Ejército Mexicano esq. Tamaulipas, Plan de Ayala, Tihuatlan C.P. 92912",
  "category":"61bbd4880c4bae8d8f44a39c",
- "img":"https://scontent.fver2-1.fna.fbcdn.net/v/t1.6435-9/46521799_1096610877188552_2164150693793890304_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=973b4a&_nc_ohc=yYeTxFhFBgYAX-wXLnu&_nc_ht=scontent.fver2-1.fna&oh=00_AT--u1XB5RHJbnJZbE8sFs_HbmI4zzNsonOFgi4Ov88MEQ&oe=61F96B08"
+ "img":"https://scontent.fver2-1.fna.fbcdn.net/v/t1.6435-9/127626272_589326318530529_6393240571865243882_n.png?_nc_cat=109&ccb=1-5&_nc_sid=973b4a&_nc_ohc=8gyveZ92MS4AX9YgyMt&_nc_ht=scontent.fver2-1.fna&oh=00_AT8QySkpPO7f_Y9R61lg1m99ic_IRyHiDVqTSjZTuSVfdA&oe=61F7BCC4",
+ "facebook":"https://www.facebook.com/lakanijacerveceria",
+ "web":"https://robertoquintero.vercel.app",
+ "coordinates":{
+   "lat": 20.531093626384614,
+   "lng": -97.46039564095025
+ }
 }
 ###
 
