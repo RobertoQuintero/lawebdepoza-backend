@@ -1,17 +1,18 @@
 
-GET http://localhost:8080/api/places
+GET http://localhost:8081/api/places
 ###
 GET http://localhost:8080/api/places/61bbe24dec8bd1459533e844
 ###
-POST http://localhost:8080/api/places
+POST http://localhost:8081/api/places
 Content-Type: application/json
-x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWJiODU1NWEwYjJkN2FiNTVjZmYyNjMiLCJpYXQiOjE2NDA3MTgwNDEsImV4cCI6MTY0MDczMjQ0MX0.O-BGAkOYqlV1wDNYTqAvwb_m7SRGRD21uIJ4g0ZNcPA
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWJiODU1NWEwYjJkN2FiNTVjZmYyNjMiLCJpYXQiOjE2NDEzMjA0NTgsImV4cCI6MTY0MTMzNDg1OH0.IiGcN7KgEPf9brMK3_4fiIpzpiws1Lcdjm1nXmfSb3Q
 
 {
-  "name":"La Kanija",
+  "name":"Michemar",
   "description":"Bar y discoteca abrimos desde las 3 P.M. hasta qu el ultimo cliente se vaya, bar, snacks, alitas, buena música y excelente atención, visitanos",
   "address":"Av. Ejército Mexicano esq. Tamaulipas, Plan de Ayala, Tihuatlan C.P. 92912",
- "category":"61bbd4880c4bae8d8f44a39c"
+ "category":"61bbd4880c4bae8d8f44a39c",
+ "img":"https://scontent.fver2-1.fna.fbcdn.net/v/t1.6435-9/46521799_1096610877188552_2164150693793890304_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=973b4a&_nc_ohc=yYeTxFhFBgYAX-wXLnu&_nc_ht=scontent.fver2-1.fna&oh=00_AT--u1XB5RHJbnJZbE8sFs_HbmI4zzNsonOFgi4Ov88MEQ&oe=61F96B08"
 }
 ###
 
@@ -24,7 +25,7 @@ Content-Type: application/json
 
 ###
 
-GET https://lawebdepoza.vercel.app/api/places
+GET https://lawebdepoza.herokuapp.com/api/places
 ###
 GET https://lawebdepoza.vercel.app/api/places/61bbe24dec8bd1459533e844
 ###
