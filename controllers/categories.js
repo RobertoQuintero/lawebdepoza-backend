@@ -2,7 +2,7 @@ const { response } = require("express");
 const { Category } = require("../models");
 
 const getCategories = async (req, res = response) => {
-  const { limit = 5, from = 0 } = req.query;
+  const { limit = 10, from = 0 } = req.query;
   const query = { status: true };
   const [total, categories] = await Promise.all([
     Category.countDocuments(query),
