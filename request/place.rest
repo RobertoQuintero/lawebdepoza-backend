@@ -3,9 +3,10 @@ GET http://localhost:8081/api/places
 ###
 GET http://localhost:8080/api/places/61bbe24dec8bd1459533e844
 ###
+# POST https://lawebdepoza.herokuapp.com/api/places
 POST http://localhost:8081/api/places
 Content-Type: application/json
-x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWJiODU1NWEwYjJkN2FiNTVjZmYyNjMiLCJpYXQiOjE2NDEzMjA0NTgsImV4cCI6MTY0MTMzNDg1OH0.IiGcN7KgEPf9brMK3_4fiIpzpiws1Lcdjm1nXmfSb3Q
+x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWJiODU1NWEwYjJkN2FiNTVjZmYyNjMiLCJpYXQiOjE2NDE2ODg0MTYsImV4cCI6MTY0MTcwMjgxNn0.l6boqVcA_xHCOoSRokyC0ORfOGEWxQ-Bp5KApNC6mfk
 
 {
   "name":"La Kanija",
@@ -18,7 +19,8 @@ x-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MWJiODU1NWEwYjJkN2FiNT
  "coordinates":{
    "lat": 20.531093626384614,
    "lng": -97.46039564095025
- }
+ },
+ 
 }
 ###
 

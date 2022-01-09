@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 require("mongoose-double")(mongoose);
 const { Schema, model } = mongoose;
-const { ObjectId, Boolean, String, Number, Double } = Schema.Types;
+const { ObjectId, Boolean, String, Number } = Schema.Types;
 
 const Place = Schema({
   name: {
@@ -18,8 +18,8 @@ const Place = Schema({
   },
   address: { type: String, required: [true, "La dirección es obligatoria"] },
   coordinates: {
-    lat: { type: Double, default: 0 },
-    lng: { type: Double, default: 0 },
+    lat: { type: mongoose.Schema.Types.Double, default: 0 },
+    lng: { type: mongoose.Schema.Types.Double, default: 0 },
   },
   facebook: { type: String, default: "" },
   web: { type: String, default: "" },
@@ -32,12 +32,12 @@ const Place = Schema({
     default: Date.now(),
   },
   rating: {
-    type: Double,
-    default: 0,
+    type: mongoose.Schema.Types.Double,
+    default: 0.0,
   },
   totalRating: {
-    type: Double,
-    default: 0,
+    type: mongoose.Schema.Types.Double,
+    default: 0.0,
   },
   quantityVoting: {
     type: Number,

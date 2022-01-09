@@ -2,6 +2,8 @@
 
 GET  http://localhost:8080/api/categories
 ###
+GET  https://lawebdepoza.herokuapp.com/api/categories?from=11&&limit=2
+###
 
 GET  http://localhost:8080/api/categories/61bbd3ec7232a4b824259922
 ###
