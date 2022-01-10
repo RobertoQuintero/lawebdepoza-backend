@@ -33,11 +33,11 @@ const Place = Schema({
   },
   rating: {
     type: Number,
-    default: 0.01,
+    default: 0.0,
   },
   totalRating: {
     type: Number,
-    default: 0.01,
+    default: 0.0,
   },
   quantityVoting: {
     type: Number,
