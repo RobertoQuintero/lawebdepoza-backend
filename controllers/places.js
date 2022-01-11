@@ -13,8 +13,6 @@ const getPlaces = async (req, res = response) => {
       .populate("category", "name"),
   ]);
 
-  // const { category, ...rest } = places;
-
   res.json({
     total,
     places,
