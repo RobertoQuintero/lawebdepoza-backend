@@ -47,6 +47,34 @@ const updateImageCloudinary = async (req, res = response) => {
   res.json({ model });
 };
 
+const postImage = async (req, res = response) => {
+  try {
+    const { tempFilePath } = req.files.file;
+    const { secure_url } = await cloudinary.uploader.upload(tempFilePath);
+    res.status(201).json({ url: secure_url });
+  } catch (error) {
+    res.status(500).json({ msg: "Error al subir imagen" });
+  }
+};
+
+const updateImage = async (req, res = response) => {
+  const { name } = req.params;
+  const { tempFilePath } = req.files.file;
+  try {
+    const cloud = await cloudinary.uploader.destroy(name);
+    if (cloud.result === "not found") {
+      res.status(404).json({ msg: "Imagen no encontrada" });
+    }
+    const { secure_url } = await cloudinary.uploader.upload(tempFilePath);
+
+    res.status(201).json({ url: secure_url });
+  } catch (error) {
+    res.status(500).json({ msg: "Error al subir imagen" });
+  }
+};
+
 module.exports = {
   updateImageCloudinary,
+  updateImage,
+  postImage,
 };
